@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Projects\\Godot\\cardbattler\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3815AF06-78E1-420C-80AF-B97E2835DB84}|CardBattler.csproj|e:\\projects\\godot\\cardbattler\\objects\\card\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3815AF06-78E1-420C-80AF-B97E2835DB84}|CardBattler.csproj|solutionrelative:objects\\card\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Card.cs",
+              "DocumentMoniker": "E:\\Projects\\Godot\\cardbattler\\objects\\card\\Card.cs",
+              "RelativeDocumentMoniker": "objects\\card\\Card.cs",
+              "ToolTip": "E:\\Projects\\Godot\\cardbattler\\objects\\card\\Card.cs",
+              "RelativeToolTip": "objects\\card\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T05:31:38.932Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
