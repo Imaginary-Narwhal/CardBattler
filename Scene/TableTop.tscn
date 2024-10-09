@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dggbeam7jghlj"]
 
-[ext_resource type="Texture2D" uid="uid://ckky78bonp87b" path="res://Assets/Tabletop.png" id="1_oli0w"]
+[ext_resource type="Texture2D" uid="uid://ckky78bonp87b" path="res://Assets/Images/Tabletop.png" id="1_oli0w"]
 [ext_resource type="Script" path="res://Scene/TableTop.cs" id="1_qjsvg"]
 [ext_resource type="PackedScene" uid="uid://7ddqw2qtajhx" path="res://Objects/Card/Card.tscn" id="2_i0bbm"]
 
@@ -36,9 +36,3 @@ transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.7
 
 [node name="Card" parent="." instance=ExtResource("2_i0bbm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.69802, 0.415599, 0)
-
-[node name="Card2" parent="." instance=ExtResource("2_i0bbm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.532837, 0)
-
-[node name="Card3" parent="." instance=ExtResource("2_i0bbm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.05282, 0.601309, 0.00594568)

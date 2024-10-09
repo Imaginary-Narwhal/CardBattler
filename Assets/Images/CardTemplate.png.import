@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2j0durqeryyk"
-path.s3tc="res://.godot/imported/CardTemp1.png-c122ded3994d454ee91cd5ae1507f6e2.s3tc.ctex"
+uid="uid://de2qihl8n1ajj"
+path.s3tc="res://.godot/imported/CardTemplate.png-6ce7e79cabeb822fc002f4fe009d01cb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/CardTemp1.png"
-dest_files=["res://.godot/imported/CardTemp1.png-c122ded3994d454ee91cd5ae1507f6e2.s3tc.ctex"]
+source_file="res://Assets/Images/CardTemplate.png"
+dest_files=["res://.godot/imported/CardTemplate.png-6ce7e79cabeb822fc002f4fe009d01cb.s3tc.ctex"]
 
 [params]
 

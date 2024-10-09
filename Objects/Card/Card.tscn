@@ -1,26 +1,26 @@
 [gd_scene load_steps=6 format=3 uid="uid://7ddqw2qtajhx"]
 
 [ext_resource type="Script" path="res://Objects/Card/Card.cs" id="1_1j4d7"]
-[ext_resource type="Texture2D" uid="uid://c2j0durqeryyk" path="res://Assets/CardTemp1.png" id="1_8xcth"]
+[ext_resource type="Texture2D" uid="uid://de2qihl8n1ajj" path="res://Assets/Images/CardTemplate.png" id="2_5ys3q"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ftkc1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i55hp"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("1_8xcth")
+albedo_texture = ExtResource("2_5ys3q")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tltyd"]
 size = Vector2(1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5djhj"]
-size = Vector3(1.28, 0.1, 1.92)
+size = Vector3(1.6, 0.1, 1.92)
 
 [node name="Card" type="RigidBody3D"]
 script = ExtResource("1_1j4d7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.28, 0, 0, 0, 1, 0, 0, 0, 1.92, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_ftkc1")
+transform = Transform3D(1.6, 0, 0, 0, 1, 0, 0, 0, 1.92, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_i55hp")
 mesh = SubResource("PlaneMesh_tltyd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

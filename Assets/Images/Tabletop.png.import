@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckky78bonp87b"
-path.s3tc="res://.godot/imported/Tabletop.png-b57c87fd0218cd46624d4042e1822b76.s3tc.ctex"
+path.s3tc="res://.godot/imported/Tabletop.png-1e9724599fd3493906ce143e312315f4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Tabletop.png"
-dest_files=["res://.godot/imported/Tabletop.png-b57c87fd0218cd46624d4042e1822b76.s3tc.ctex"]
+source_file="res://Assets/Images/Tabletop.png"
+dest_files=["res://.godot/imported/Tabletop.png-1e9724599fd3493906ce143e312315f4.s3tc.ctex"]
 
 [params]
 
