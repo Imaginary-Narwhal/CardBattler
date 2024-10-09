@@ -9,9 +9,12 @@ public partial class TableTop : Node3D
     private RigidBody3D selectedBody;
     private bool isDragging = false;
     private Plane dragPlane;
+    private Vector3? dragTarget;
 
-    // Define the lift offset
+    // Define const
     private const float LiftOffset = 0.5f; // Adjust this value to control the lift height
+    private const float dragStrength = 10.0f;
+    private const float dragDampening = 0.8f;
 
     public override void _Ready()
     {
@@ -39,13 +42,13 @@ public partial class TableTop : Node3D
         }
     }
 
-    public override void _Process(double delta)
+    /*public override void _Process(double delta)
     {
         if (isDragging && selectedBody != null)
         {
             DragBody();
         }
-    }
+    }*/
 
     private void StartDragging()
     {
@@ -66,7 +69,6 @@ public partial class TableTop : Node3D
         var result = spaceState.IntersectRay(query);
 
         if (result.Count > 0)
-        //{ && result["collider"] is RigidBody3D body)
         {
             var collider = result["collider"].As<RigidBody3D>();
             if(collider != null) { 
@@ -95,13 +97,38 @@ public partial class TableTop : Node3D
         // Calculate the intersection point between the ray and the drag plane
         Vector3? intersectPoint = dragPlane.IntersectsRay(rayOrigin, rayDirection);
 
+        dragTarget = intersectPoint;
+
         // Move the selected body to the intersected position (keep its current Z or apply custom logic)
-        selectedBody.GlobalTransform = new Transform3D(
+        /*selectedBody.GlobalTransform = new Transform3D(
             selectedBody.GlobalTransform.Basis,
             //new Vector3(intersectPoint.Value.X, intersectPoint.Value.Y, selectedBody.GlobalTransform.Origin.Z)
             new Vector3(intersectPoint.Value.X, intersectPoint.Value.Y + LiftOffset, intersectPoint.Value.Z)
-
-        );
+        );*/
     }
 
+    public override void _PhysicsProcess(double delta)
+    {
+        if (isDragging && selectedBody != null)
+        {
+            DragBody();
+            ApplyDraggingForce((float)delta);
+        }
+    }
+
+    private void ApplyDraggingForce(float delta)
+    {
+        if(selectedBody != null)
+        {
+            Vector3 currentPosition = selectedBody.GlobalTransform.Origin;
+
+            if (dragTarget.HasValue)
+            {
+                Vector3 direction = (dragTarget.Value - currentPosition) * dragStrength;
+                Vector3 newPosition = currentPosition.Lerp(dragTarget.Value, dragStrength * delta);
+                newPosition = newPosition.Lerp(dragTarget.Value, dragDampening * delta);
+                selectedBody.GlobalTransform = new Transform3D(selectedBody.GlobalTransform.Basis, newPosition);
+            }
+        }
+    }
 }
